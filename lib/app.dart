@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
 
     return MaterialApp(
       color: Colors.white,
-      title: 'Flutter Pokedex',
+      title: 'Flutter',
       theme: isDark ? Theming.darkTheme : Theming.lightTheme,
       navigatorKey: AppNavigator.navigatorKey,
       localizationsDelegates: AppLocalizations.localizationsDelegates,

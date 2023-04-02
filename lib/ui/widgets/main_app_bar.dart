@@ -29,7 +29,7 @@ class MainSliverAppBar extends SliverAppBar {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
-            padding: EdgeInsets.symmetric(horizontal: mainAppbarPadding),
+            padding: const EdgeInsets.symmetric(horizontal: mainAppbarPadding),
             onPressed: onLeadingPress,
             icon: Icon(
               Icons.arrow_back,
@@ -38,7 +38,8 @@ class MainSliverAppBar extends SliverAppBar {
           ),
           actions: [
             IconButton(
-              padding: EdgeInsets.symmetric(horizontal: mainAppbarPadding),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: mainAppbarPadding),
               icon: Icon(Icons.favorite_border_outlined,
                   color: Theme.of(context).textTheme.bodyLarge!.color),
               onPressed: onTrailingPress,
@@ -98,7 +99,7 @@ class MainAppBar extends AppBar {
           title: title,
           backgroundColor: Colors.transparent,
           elevation: 0,
-          leading: IconButton(
+          leading: const IconButton(
             padding: EdgeInsets.symmetric(horizontal: mainAppbarPadding),
             icon: Icon(Icons.arrow_back),
             onPressed: AppNavigator.pop,

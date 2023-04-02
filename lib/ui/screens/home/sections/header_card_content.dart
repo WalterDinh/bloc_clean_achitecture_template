@@ -3,10 +3,6 @@ part of '../home.dart';
 class _HeaderCardContent extends StatelessWidget {
   static const double height = 582;
 
-  void _onSelectCategory(Category category) {
-    AppNavigator.push(category.route);
-  }
-
   @override
   Widget build(BuildContext context) {
     var themeCubit = BlocProvider.of<ThemeCubit>(context, listen: true);
@@ -15,31 +11,57 @@ class _HeaderCardContent extends StatelessWidget {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: const BoxDecoration(
-        // color: Colors.white,
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
-        // border: Border(
-        //   bottom: BorderSide(
-        //     color: Colors.white,
-        //   ),
-        // ),
       ),
-    );
-  }
-
-  Widget _buildTitle() {
-    return Expanded(
-      child: Container(
-        constraints: const BoxConstraints.expand(),
-        padding: const EdgeInsets.all(28),
-        alignment: Alignment.bottomLeft,
-        child: const Text(
-          'What Pokemon\nare you looking for?',
-          style: TextStyle(
-            fontSize: 30,
-            height: 1.6,
-            fontWeight: FontWeight.w900,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const SizedBox(
+            height: 100,
           ),
-        ),
+          Text(
+            'Heading 1',
+            style: Theme.of(context).textTheme.headlineLarge,
+          ),
+          Text(
+            'Heading 2',
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          Text(
+            'Heading 1',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          Text(
+            'Body 1',
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
+          Text(
+            'Body 2',
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+          Text(
+            'Body 3',
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              OutlinedButton(
+                onPressed: null,
+                child: Text('OutlinedButton'),
+              ),
+              TextButton(
+                onPressed: null,
+                child: Text('TextButton'),
+              ),
+              ElevatedButton(
+                //Button Color is as define in theme
+                onPressed: null,
+                child: Text("Send"), //Text Color as define in theme
+              )
+            ],
+          ),
+        ],
       ),
     );
   }

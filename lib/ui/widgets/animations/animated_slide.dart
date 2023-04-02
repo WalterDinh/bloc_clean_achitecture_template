@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AnimatedSlide extends AnimatedWidget {
   const AnimatedSlide({
+    super.key,
     required this.child,
     required this.animation,
   }) : super(listenable: animation);

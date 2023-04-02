@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:my_app/configs/colors.dart';
-
-import 'package:my_app/domain/entities/category.dart';
-import 'package:my_app/routes.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import '../../../states/theme/theme_cubit.dart';
 
 part 'sections/pokemon_news.dart';
@@ -89,7 +84,34 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ],
-        body: const _PokemonNews(),
+        body: Column(
+          children: [
+            Text(
+              'Heading 1',
+              style: Theme.of(context).textTheme.headlineLarge,
+            ),
+            Text(
+              'Heading 2',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'Heading 1',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            Text(
+              'Body 1',
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
+            Text(
+              'Body 2',
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            Text(
+              'Body 3',
+              style: Theme.of(context).textTheme.bodySmall,
+            )
+          ],
+        ),
       ),
     );
   }

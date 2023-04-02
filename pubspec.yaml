@@ -17,6 +17,7 @@ dependencies:
   pretty_dio_logger: ^1.1.1
   logger: ^1.2.2
   intl: ^0.17.0
+  simple_animations: ^5.0.0+3
   flutter_bloc: ^8.1.2
   json_annotation: ^4.1.0
   sliding_up_panel: ^2.0.0+1
@@ -25,7 +26,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  analyzer: any
+  dart_code_metrics: any
+  flutter_lints: ^2.0.1
   json_serializable: ^4.1.4
   build_runner: ^2.1.11
 

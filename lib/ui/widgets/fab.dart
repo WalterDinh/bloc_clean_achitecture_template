@@ -17,9 +17,10 @@ class FabItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var bgColor = Theme.of(context).colorScheme.background;
+
     return MaterialButton(
-      shape: StadiumBorder(),
-      padding: EdgeInsets.fromLTRB(24, 8, 16, 8),
+      shape: const StadiumBorder(),
+      padding: const EdgeInsets.fromLTRB(24, 8, 16, 8),
       color: bgColor,
       splashColor: Colors.grey[100],
       highlightColor: Colors.grey[100],
@@ -31,7 +32,7 @@ class FabItem extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Text(item.title),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Icon(item.icon, color: AppColors.indigo),
         ],
       ),
